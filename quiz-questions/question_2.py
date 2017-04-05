@@ -6,30 +6,27 @@ def number_of_customers_per_state(customers):
 
     This function receives a dictionary containing states (as keys) and
     customers for those states (as a list of dictionaries) and should
-    return a final dictionary containing the count of customers per state.
+    return a final dictionary containing the count of customers per state."""
 
-    customers = {
-        'UT': [{
-            'name': 'Mary',
-            'age': 28
-        }, {
-            'name': 'John',  # Eldest
-            'age': 31
-        }],
-        'NY': [{
-            'name': 'Linda',  # Eldest
-            'age': 71
-        }]
-    }
-    number_of_customers_per_state(customers)
-    >>>
-    {
-        'UT': 2,
-        'NY': 1
-    }
-    """
-    # Write your code here
-    pass
+    # number_of_customers_per_state(customers)
+    #
+    # {
+    #     'UT': 2,
+    #     'NY': 1
+    # }
+    newDict = {}
+
+    if type(customers) == dict and customers != {}:
+        for key in customers:
+            if customers[key] != 0 and customers[key] != None:
+                newDict[key] = len(customers[key])
+            else:
+                newDict[key] = 0
+    else:
+        return {}
+    return newDict
+
+
 
 
 class NumberOfCustomersPerStateTestCase(unittest.TestCase):
@@ -99,3 +96,4 @@ class NumberOfCustomersPerStateTestCase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

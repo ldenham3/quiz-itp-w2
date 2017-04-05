@@ -1,6 +1,5 @@
 def question_1():
     """Return the correct value for the following question.
-
     **IMPORTANT!** Return the actual value of `c`, not just the answer option.
 
     Take a look at the following code and answer:
@@ -8,7 +7,6 @@ def question_1():
     a = 10
     b = 3
     c = 7
-
 
     def test_scope(b):
         a = 11
@@ -20,4 +18,6 @@ def question_1():
     What will be the final value of the variable c?
     """
     # Return the CORRECT value of `c`
-    pass
+    return 30
+
+
